@@ -925,7 +925,14 @@ html {
 .blackout .state-background {
 	background: rgba( 0, 0, 0, 0.6 );
 }
-
-
-
-
+.big-data .state-background {
+    background-image: url('../img/data.jpg');
+    background-position: center -500px;
+    background-repeat: no-repeat;
+    background-color: #000;
+}
+.silver-bullet .state-background {
+    background-image: url('../img/silver-bullet.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+}
