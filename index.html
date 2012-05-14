@@ -1,9 +1,9 @@
-<!doctype html>  
+<!doctype html>
 <html lang="en">
-	
+
 	<head>
 		<meta charset="utf-8">
-		
+
 		<title>reveal.js</title>
 
 		<meta name="description" content="An easy to use CSS 3D slideshow tool for quickly creating good looking HTML presentations.">
@@ -11,49 +11,272 @@
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-		
+
 		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-		
+
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
 
 		<link rel="stylesheet" href="lib/zenburn.css">
 	</head>
-	
+
 	<body>
-		
+
 		<div id="reveal">
 
 			<!-- Used to fade in a background when a specific slide state is reached -->
 			<div class="state-background"></div>
-			
+
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3 class="inverted">CSS 3D Presentations</h3>
+					<h1>BIG DATA</h1>
+                    <!-- <h3 class="inverted">CSS 3D Presentations</h3> -->
 					<script>
 						// Delicously hacky. Look away.
 						if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
 					</script>
 				</section>
-				
+                <section>
+                    <h3>Quick Bio</h3>
+                    <p class="fragment">Brian Dailey</p>
+                    <p class="fragment">CTO, Co-founder of Stratasan</p>
+                    <br/>
+                    <p class="fragment">&lt;3 code.</p>
+                    <p class="fragment">@brian_dailey</p>
+                </section>
 				<section>
 					<h2>Heads Up</h2>
-					<p>
-						reveal.js is an easy to use, HTML based, presentation tool. You'll need a modern browser with 
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
-					<p>
-						<i><small>- <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small></i>
-					</p>
 				</section>
-				
+				<section data-state="big-data">
+					<h1>BIG DATA IS BIG</h1>
+				</section>
+                <section>
+					<h2>WHAT IS IT?</h2>
+                    <p class="fragment">Famously according to Gartner...</p>
+					<ol>
+                        <li class="fragment"><strong>VOLUME</strong></li>
+						<li class="fragment"><em>velocity</em></li>
+                        <li class="fragment"><code>variety</code></li>
+					</ol>
+                    <p class="fragment"><i><small>&mdash; <a href="http://www.gartner.com/it/page.jsp?id=1731916">Gartner</a></small></i></p>
+				</section>
+                <section data-state="silver-bullet">
+                    <h2>It is not a silver bullet.</h2>
+                    <br/>
+                    <br/>
+                    <p><small>&mdash; photo credit <a href="http://www.flickr.com/photos/davehogg/6687883927/">dave hogg</a></small></p>
+                </section>
+                <section>
+					<blockquote cite="https://twitter.com/#!/NeilRaden/status/198906988011323392">
+                        I think #bigdata found Jimmy Hoffa.
+					</blockquote>
+                    <p style="font-size: 18px;">Constellation Research analyst Neil Raden, in response to the hubris.</p>
+                </section>
+                <section>
+                    <h2>Our Challenges</h2>
+                    <ul>
+                        <li class="fragment">Variety of data.</li>
+                        <li class="fragment">Data quality (or lack thereof).</li>
+                        <li class="fragment">Velocity of incoming data.</li>
+                        <li class="fragment">And less often, sheer size.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Data Procurement</h2>
+                    <h3>Where's the Data?</h3>
+                    <p class="fragment">
+                        Short answer:
+                        <span class="fragment">everywhere.</span>
+                    </p>
+                </section>
+                <section>
+                    <h2>Google It</h2>
+                    <blockquote cite="http://www.datajournalismhandbook.org/1.0/en/getting_data_7.html">
+                        To state the obvious, obtaining data has never been easier. Before the widespread publishing of data on the web, even if you had identified a dataset you needed, you’d need to ask whoever had a copy to make it accessible to you, possibly involving paper and the post or a personal visit. Now, you have your computer ask their computer to send a copy to your computer.
+                    </blockquote>
+                    <p style="font-size: 18px;">&mdash; <a href="http://www.datajournalismhandbook.org/1.0/en/getting_data_7.html">The Data Journalism Handbook: Understanding Data</a></p>
+                </section>
+                <section>
+                    <h2>Public Data Portals</h2>
+                    <ul>
+                        <li>data.gov</li>
+                        <li>World Bank, United Nations</li>
+                        <li>CDC, CMS, NHIS</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Ask!</h1>
+                </section>
+                <section>
+                    <h2>"Clean data"</h2>
+                    <h3 class="fragment">The bad news...</h3>
+                </section>
+                <section>
+                    <img src="img/unicorn.jpg" style="width: 500px;"/>
+                </section>
+                <section>
+                    <h3>The good news...</h3>
+                    <h4>You're not alone.</h4>
+                </section>
+                <section>
+                    <img src="img/enron.png" />
+                </section>
+                <section>
+                    <h3>Inspecting the data</h3>
+                    <p class="fragment">Unix tools and pipes are great.</p>
+                    <pre class="fragment">
+<strong>$ head -n3 Medicare_Spending_Per_Patient.csv</strong>
+<span class="fragment">Provider ID,Hospital Name,Address 1,Address 2,Address 3,City,State,ZIP Code,County Name,Phone Number,Measure,Spending per Hospital Patient with Medicare,Footnote
+100007,FLORIDA HOSPITAL,601 E ROLLINS ST,,,ORLANDO,FL,32803,ORANGE,4073031976,Spending per Hospital Patient with Medicare,1.04,
+330101,NEW YORK-PRESBYTERIAN HOSPITAL,525 EAST 68TH STREET,,,NEW YORK,NY,10021,NEW YORK,2127464189,Spending per Hospital Patient with Medicare,0.95,</span>
+</pre>
+                    <pre class="fragment">
+<strong>$ tail -n2 Medicare_Spending_Per_Patient.csv</strong>
+<span class="fragment">330406,SUNNYVIEW HOSPITAL AND REHABILITATION CENTER,1270 BELMONT AVENUE,,,SCHENECTADY,NY,12308,SCHENECTADY,5183863580,Spending per Hospital Patient with Medicare,N/A,The number of cases is too small (fewer than 10) to reliably tell how well the hospital is performing.
+670077,METHODIST WEST HOUSTON HOSPITAL,18500 KATY FREEWAY,,,HOUSTON,TX,77094,HARRIS,8325221000,Spending per Hospital Patient with Medicare,N/A,The number of cases is too small (fewer than 10) to reliably tell how well the hospital is performing.</span>
+</pre>
+                </section>
+                <section>
+                    <h3>Inspecting the data</h3>
+                    <pre class="fragment">
+<strong>$ head -3 Medicare_Spending_Per_Patient.csv| cut -d, -f 7,12</strong><span class="fragment">
+State,Spending per Hospital Patient with Medicare
+FL,1.04
+NY,0.95</span>
+</pre>
+                </section>
+                <section>
+                    <h3>PANDAS!</h3>
+                    <blockquote>pandas is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language.</blockquote>
+                    <p style="font-size: 18px;">&mdash; <a href="http://pandas.pydata.org/">pandas.pydata.org</a></p>
+                </section>
+                <section>
+                    <pre><code>
+&gt;&gt;&gt; from pandas import read_csv
+&gt;&gt;&gt; df = read_csv('Medicare_Spending_Per_Patient.csv', na_values=["N/A"])
+
+# pandas knows that spending per patient is numeric!
+&gt;&gt;&gt; df['Spending per Hospital Patient with Medicare'].mean()
+0.98212492528391926
+
+&gt;&gt;&gt; df['Spending per Hospital Patient with Medicare'].median()
+0.99
+
+&gt;&gt;&gt; df['Spending per Hospital Patient with Medicare'].std()
+0.090244961071923757
+                    </code></pre>
+                </section>
+                <section>
+<pre><code>
+In [60]: for state, by_state in grouped_by_state:
+   ....:     if by_state['Spending per Hospital Patient with Medicare'].mean() > \
+   ....:             (df['Spending per Hospital Patient with Medicare'].mean() + \
+   ....:                (df['Spending per Hospital Patient with Medicare'].std()/2)):
+   ....:         print state, by_state['Spending per Hospital Patient with Medicare'].mean()
+   ....: 
+FL 1.05884146341
+LA 1.03285714286
+MA 1.03327868852
+NJ 1.059375
+NV 1.06041666667
+</code></pre>
+                </section>
+                <section>
+                    <p>Works great for medium-sized data sets.</p>
+                    <p>But what about 500GB+?</p>
+                </section>
+                <section>
+                    <h1>Hadoop</h1>
+                </section>
+                <section>
+                    <h3>mrjob</h3>
+                    <img src="img/mrjob.png" />
+                </section>
+                <section>
+                    <h3>mrjob</h3>
+                    <pre><code contenteditable><span class="fragment">
+from mrjob.job import MRJob
+</span><span class="fragment">
+class MRChargeSummer(MRJob):
+    def mapper(self, key, line):
+        row = line.split(',')
+        # Only process records for newborn (Diagnostic code) and from 2009.
+        if row[108].strip() == '795' and row[-1].strip() == '2009':
+            try:
+                yield row[2], (int(row[31].strip()), 1)
+            except ValueError:
+                pass
+</span><span class="fragment">
+    def reducer(self, hospital, charges_count):
+        individual_charges, individual_counts = zip(*charges_count)
+        total_charges = sum(individual_charges)
+        count = sum(individual_counts)
+        average_charge_per_visit = total_charges/count
+        yield hospital, average_charge_per_visit
+</span><span class="fragment">
+    def steps(self):
+        return [self.mr(self.mapper, self.reducer),]
+</span><span class="fragment">
+if __name__ == '__main__':
+    MRChargeSummer.run()
+</span>
+					</code></pre>
+                </section>
+                <section>
+                    <!-- Just in case the demo server has a tiny, tiny screen. -->
+                    <section>
+                        <pre><code contenteditable>
+    from mrjob.job import MRJob
+
+    class MRChargeSummer(MRJob):
+        def mapper(self, key, line):
+            row = line.split(',') # Split using comma.
+            # We only want newborns in 2008.
+            if row[108].strip() == '795' and row[-1].strip() == '2008': 
+                # If it's not a valid integer, ignore it.
+                try:
+                    # Return both charges and a count.
+                    yield row[2], (int(row[31].strip()), 1)
+                except ValueError:
+                    pass
+					</code></pre>
+                    </section>
+                    <section>
+                        <pre><code contenteditable>
+        def sum_charges(self, hospital, charge_and_count):
+            total = [0, 0]
+            # Sum both charge and count.
+            for charge in charg_and_count:
+                total[0] += charge[0]
+                total[1] += charge[1]
+            # Throw in an average charge for grins.
+            total.append(total[0]/total[1])
+            yield hospital, total
+					</code></pre>
+                    </section>
+                    <section>
+                        <pre><code contenteditable>
+        def sum_charges(self, hospital, charge_and_count):
+        def steps(self):
+            # run mapper, then reducer.
+            return [self.mr(self.mapper, self.sum_charges),]
+					</code></pre>
+                    </section>
+                    <section>
+                        <pre><code contenteditable>
+    if __name__ == '__main__':
+        # Initialize, run!
+        MRChargeSummer.run()
+                        </code></pre>
+                    </section>
+                </section>
+
 				<!-- Example of nested vertical slides -->
 				<section>
 					<section>
-						<h2>Vertical Slides</h2>
+						<h2></h2>
 						<p>
 							Slides can be nested inside of other slides,<br/>
 							try pressing <a href="#/2/1">down</a>.
@@ -111,7 +334,7 @@
 						<li>Or here</li>
 					</ul>
 				</section>
-				
+
 				<section>
 					<h2>Fantastic Ordered List</h2>
 					<ol>
@@ -165,21 +388,21 @@
 						The nice thing about standards is that there are so many to choose from</q> and block:
 					</p>
 					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						For years there has been a theory that millions of monkeys typing at random on millions of typewriters would 
+						For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
 						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
 					</blockquote>
 				</section>
-				
+
 				<section>
 					<h2>Pretty Code</h2>
 					<pre><code contenteditable>
-var supports3DTransforms =  document.body.style['webkitPerspective'] !== undefined || 
+var supports3DTransforms =  document.body.style['webkitPerspective'] !== undefined ||
 				document.body.style['MozPerspective'] !== undefined ||
 				document.body.style['perspective'] !== undefined;
 
 function linkify( selector ) {
     if( supports3DTransforms ) {
-        
+
         var nodes = document.querySelectorAll( selector );
 
         for( var i = 0, len = nodes.length; i < len; i++ ) {
@@ -197,7 +420,7 @@ linkify( 'a' );
 					</code></pre>
 					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
 				</section>
-				
+
 				<section>
 					<h2>Intergalactic Interconnections</h2>
 					<p>
@@ -216,14 +439,14 @@ linkify( 'a' );
 						<li class="fragment"><strong>fragments</strong></li>
 					</ol>
 				</section>
-				
+
 				<section>
 					<h2>Spectacular image!</h2>
 					<a class="image" href="http://hakim.se/experiments/html5/breakdom/" target="_blank">
 						<img width="320" height="412" src="https://s3.amazonaws.com/hakim-static/reveal-js/breakdom.png">
 					</a>
 				</section>
-				
+
 				<section>
 					<h2>Stellar Links</h2>
 					<ul>
@@ -232,7 +455,7 @@ linkify( 'a' );
 						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
 					</ul>
 				</section>
-				
+
 				<section>
 					<h1>THE END</h1>
 					<h3 class="inverted">BY Hakim El Hattab / hakim.se</h3>
@@ -249,15 +472,15 @@ linkify( 'a' );
 
 			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
 			<div class="progress"><span></span></div>
-			
+
 		</div>
-		
+
 		<script src="js/reveal.js"></script>
 
 		<!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
 		<script src="lib/highlight.js"></script>
 		<script src="lib/classList.js"></script>
-		
+
 		<script>
 			// Parse the query string into a key/value object
 			var query = {};
