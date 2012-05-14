@@ -68,6 +68,11 @@
 * R
 * pandas (demo)
 
+##### Python - the language du jour
+* Pycon 2012 had a huge data scientist contingent
+* Check out talks online! pyvideos.org
+
+
 #### Tools (Larger Data)
 * Python & Hadoop Streaming
 	* mrjob (demo)
