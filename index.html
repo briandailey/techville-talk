@@ -257,6 +257,11 @@ hive&gt; FROM invites a INSERT OVERWRITE TABLE events SELECT TRANSFORM(a.foo, a.
                     <img src="img/mrjob.png" />
                 </section>
                 <section>
+                    <h2>Input</h2>
+                    <h4>Arizona Inpatient Visits</h4>
+                    <pre>D_R,fac_id,fac_npi,mrn,pcn,ph1,pt_nam,ssn,add,cty,st,zip,cc,hmls,dob,sex,race,mar_st,ph2,sym_dt,adm_dt,adm_hr,adm_typ,adm_src,dis_dt,dis_hr,dis_st,new_bwt,dnr,ph3,bill_dt,tot_chg,pay_typ,r010x,r011x,r012x,r013x,r014x,r015x,r016x,r018x,r019x,r020x,r021x,r022x,r023x,r024x,r025x,r026x,r027x,r028x,r029x,r030x,r031x,r032x,r033x,r034x,r035x,r036x,r037x,r038x,r039x,r040x,r041x,r042x,r043x,r044x,r045x,r046x,r047x,r048x,r050x,r053x,r061x,r062x,r063x,r068x,r070x,r071x,r072x,r073x,r074x,r075x,r076x,r077x,r078x,r079x,r080x,r081x,r088x,r090x,r091x,r092x,r094x,r095x,r096x,r097x,r098x,r099x,r210x,r_oth,r0170,r0171,r0172,r0173,r0174,r0179,cmg,drg,drg_ver,ph4,icd,prv1,prv2,prv3,adm_dx,pdx1,poa1,dx2,poa2,dx3,poa3,dx4,poa4,dx5,poa5,dx6,poa6,dx7,poa7,dx8,poa8,dx9,poa9,dx10,poa10,dx11,poa11,dx12,poa12,dx13,poa13,dx14,poa14,dx15,poa15,dx16,poa16,dx17,poa17,dx18,poa18,dx19,poa19,dx20,poa20,dx21,poa21,dx22,poa22,dx23,poa23,dx24,poa24,dx25,poa25,e1,poae1,e2,poae2,e3,poae3,e4,poae4,e5,poae5,e6,poae6,acc_st,ph5,pr1,pr1_dt,pr2,pr2_dt,pr3,pr3_dt,pr4,pr4_dt,pr5,pr5_dt,pr6,pr6_dt,pr7,pr7_dt,pr8,pr8_dt,pr9,pr9_dt,pr10,pr10_dt,pr11,pr11_dt,pr12,pr12_dt,ph6,att_nam,att_npi,att_lic,att_brd,opr_nam,opr_npi,opr_lic,opr_brd,oth_nam,oth_npi,oth_lic,oth_brd,ph7,rec_typ,los,age_yr,age_mo,age_day,adm_dow,disc_dow,DATA_SOURCE_YEAR</pre>
+                </section>
+                <section>
                     <h3>mrjob</h3>
                     <pre><code contenteditable><span class="fragment">
 from mrjob.job import MRJob
@@ -335,6 +340,28 @@ if __name__ == '__main__':
                     </section>
                 </section>
                 <section>
+                    <h2>Output</h2>
+                    <pre><code>
+$ python myjob.py < arizona_charges.csv > output
+# MAGIC
+$ head -n10 output
+"1346291648" 3946
+"1780635078" 3830
+"1528169125" 3575
+"1255302766" 3496
+"1154384899" 3262
+"1174512792" 3207
+"1386608859" 3012
+"1811951429" 2878
+"1073576740" 2814
+"1790860856" 2789</code></pre>
+                </section>
+                <section>
+                    <h3>The tools are improving!</h3>
+                    <p>Especially in open source.</p>
+                </section>
+                <section>
+                    <img src="img/venn.png" />
                 </section>
                 <section>
                     <h1>THE END.</h1>

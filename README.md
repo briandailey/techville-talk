@@ -74,6 +74,13 @@
 
 
 #### Tools (Larger Data)
-* Python & Hadoop Streaming
-	* mrjob (demo)
-* Hive & Hadoop (demo)
+* Hadoop
+	* Java
+	* Pig
+	* Hive
+	* Pipes
+	
+##### mrjob
+* Arizona inpatient file, looking at facility and charges for normal newborn visits.
+* Filter by year & DRG code
+* Output tuple of charge & count
