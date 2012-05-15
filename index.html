@@ -186,6 +186,7 @@ TX,N/A</pre>
                 </section>
                 <section>
 <pre><code>
+In [59]: grouped_by_state = df.groupby('State')
 In [60]: for state, by_state in grouped_by_state:
    ....:     if by_state['Spending per Hospital Patient with Medicare'].mean() > \
    ....:             (df['Spending per Hospital Patient with Medicare'].mean() + \
