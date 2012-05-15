@@ -32,6 +32,11 @@
 			<div class="slides">
 				<section>
 					<h1>BIG DATA</h1>
+                    <ol>
+                        <li class="fragment">Procurement</li>
+                        <li class="fragment">Inspection</li>
+                        <li class="fragment">Analysis</li>
+                    </ol>
                     <!-- <h3 class="inverted">CSS 3D Presentations</h3> -->
 					<script>
 						// Delicously hacky. Look away.
@@ -67,15 +72,6 @@
                     <br/>
                     <br/>
                     <p><small>&mdash; photo credit <a href="http://www.flickr.com/photos/davehogg/6687883927/">dave hogg</a></small></p>
-                </section>
-                <section>
-                    <h2>Our Challenges</h2>
-                    <ul>
-                        <li class="fragment">Variety of data.</li>
-                        <li class="fragment">Data quality (or lack thereof).</li>
-                        <li class="fragment">Velocity of incoming data.</li>
-                        <li class="fragment">And less often, sheer size.</li>
-                    </ul>
                 </section>
                 <section>
                     <h2>Data Procurement</h2>
@@ -250,7 +246,7 @@ hive&gt; FROM invites a INSERT OVERWRITE TABLE events SELECT TRANSFORM(a.foo, a.
                 </section>
                 <section>
                     <h3>mrjob</h3>
-                    <pre><code contenteditable><span class="fragment">
+                    <pre><code><span class="fragment">
 from mrjob.job import MRJob
 </span><span class="fragment">
 class MRChargeSummer(MRJob):
@@ -281,7 +277,7 @@ if __name__ == '__main__':
                 <section>
                     <!-- Just in case the demo server has a tiny, tiny screen. -->
                     <section>
-                        <pre><code contenteditable>
+                        <pre><code>
     from mrjob.job import MRJob
 
     class MRChargeSummer(MRJob):
@@ -298,7 +294,7 @@ if __name__ == '__main__':
 					</code></pre>
                     </section>
                     <section>
-                        <pre><code contenteditable>
+                        <pre><code>
         def sum_charges(self, hospital, charge_and_count):
             total = [0, 0]
             # Sum both charge and count.
@@ -311,7 +307,7 @@ if __name__ == '__main__':
 					</code></pre>
                     </section>
                     <section>
-                        <pre><code contenteditable>
+                        <pre><code>
         def sum_charges(self, hospital, charge_and_count):
         def steps(self):
             # run mapper, then reducer.
@@ -319,7 +315,7 @@ if __name__ == '__main__':
 					</code></pre>
                     </section>
                     <section>
-                        <pre><code contenteditable>
+                        <pre><code>
     if __name__ == '__main__':
         # Initialize, run!
         MRChargeSummer.run()
